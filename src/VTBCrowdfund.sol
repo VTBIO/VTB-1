@@ -85,10 +85,11 @@ contract VTBCrowdfund is Ownable {
         uint price = 2100;
 
         tokens = weiAmount * price;
-        weiRaised = weiRaised.add(weiAmount);
-        wallet.transfer(weiAmount);
         if (!VTB.transferFromCrowdfund(_to, tokens)) {revert();}
         TokenPurchase(_to, weiAmount, tokens);
+
+        weiRaised = weiRaised.add(weiAmount);
+        wallet.transfer(weiAmount);
     }
 
     // -------------------------------------------------

@@ -36,17 +36,3 @@ Run test suite continuously:
 ```bash
 yarn test --watch
 ```
-
-### Web interface
-
-Run a local development chain with:
-
-```bash
-yarn chain
-```
-
-Then in a separate terminal start an auto-updating web server:
-
-```bash
-yarn web
-```

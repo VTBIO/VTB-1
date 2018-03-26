@@ -66,11 +66,6 @@ contract VTBToken is ERC20, Ownable {
         _;
     }
 
-    modifier notBeforeCrowdfundEnds(){                     // Ensures actions can only happen after crowdfund ends
-        require(now >= icoEndsAt);
-        _;
-    }
-
     modifier checkVTBTeamLockingPeriod() {                 // Ensures locking period is over
         require(now >= teamLockingPeriod);
         _;
@@ -149,7 +144,7 @@ contract VTBToken is ERC20, Ownable {
 
         icoStartsAt          = 1522029600;                 // Mar 26th 2018, 10:00, GMT+8
         icoEndsAt            = 1585188000;                 // Mar 26th 2020, 10:00, GMT+8
-        teamLockingPeriod = icoEndsAt.add(365 days);       // 12 months locking period
+        teamLockingPeriod    = icoStartsAt.add(365 days);  // 12 months locking period
 
         addToBalance(foundationAddress, foundationSupply);
 
@@ -157,7 +152,7 @@ contract VTBToken is ERC20, Ownable {
     }
 
     // -------------------------------------------------
-    // Opens early birds sale
+    // Opens sale
     // -------------------------------------------------
     function startCrowdfund() external onlyCrowdfund onlyDuringCrowdfund returns(bool) {
         require(stage == icoStages.Ready);
