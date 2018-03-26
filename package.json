@@ -1,0 +1,34 @@
+{
+  "name": "VTB",
+  "version": "1.0.0",
+  "description": "Vehicle to Everything Blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "./build.sh",
+    "chain": "node chain.js",
+    "web": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoyocat/VTB.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoyocat/VTB/issues"
+  },
+  "homepage": "https://github.com/yoyocat/VTB#readme",
+  "dependencies": {
+    "zeppelin-solidity": "^1.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-subset": "^1.6.0",
+    "ganache-core": "^2.0.2",
+    "lite-server": "^2.3.0",
+    "mocha": "^4.0.1",
+    "solc": "^0.4.19",
+    "web3": "^1.0.0-beta.26"
+  }
+}

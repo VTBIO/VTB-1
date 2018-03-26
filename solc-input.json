@@ -1,0 +1,38 @@
+{
+  "language": "Solidity",
+  "settings": {
+    "remappings": [
+      "node_modules/=../node_modules/"
+    ],
+    "outputSelection": {
+      "VTBToken.sol": {
+        "*": [
+          "metadata",
+          "abi",
+          "evm.bytecode",
+          "evm.sourceMap"
+        ]
+      },
+      "VTBCrowdfund.sol": {
+        "*": [
+          "metadata",
+          "abi",
+          "evm.bytecode",
+          "evm.sourceMap"
+        ]
+      }
+    }
+  },
+  "sources": {
+    "VTBToken.sol": {
+      "urls": [
+        "VTBToken.sol"
+      ]
+    },
+    "VTBCrowdfund.sol": {
+      "urls": [
+        "VTBCrowdfund.sol"
+      ]
+    }
+  }
+}
